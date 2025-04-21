@@ -3,12 +3,14 @@
   "author": "Preston Arnold",
   "version": "0.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "tsx src/test.ts"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
     "@types/node": "^22.14.1",
     "chalk": "^5.4.1",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
