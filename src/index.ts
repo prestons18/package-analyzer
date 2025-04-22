@@ -1,3 +1,8 @@
+// Core exports
+export { ComponentFinder } from "./finders/ComponentFinder";
+export { MonorepoDetector } from "./detectors/MonorepoDetector";
+export { PackageAnalyzer } from "./core/PackageAnalyzer";
+
 // Core types
 export type {
   FrameworkInfo,
