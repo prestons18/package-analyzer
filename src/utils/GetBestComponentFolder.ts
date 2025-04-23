@@ -1,4 +1,4 @@
-import { PackageMetadata } from "src/core/types";
+import { PackageMetadata } from "../core/types";
 import path from "path";
 
 /**
