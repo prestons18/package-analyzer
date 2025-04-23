@@ -43,3 +43,35 @@ export function getBestComponentFolder(
 
   return null;
 }
+
+/**
+ * Gets the nested component paths from the best component folder
+ * @param bestFolder The best component folder path
+ * @param metadata The package metadata containing component information
+ * @returns Array of component paths with their nested structure
+ */
+export function getNestedComponentPaths(
+  bestFolder: string | null,
+  metadata: PackageMetadata
+): Array<{ path: string }> {
+  if (!bestFolder || !metadata.components || metadata.components.length === 0) {
+    return [];
+  }
+
+  const nestedPaths: Array<{ path: string }> = [];
+
+  metadata.components.forEach((component) => {
+    const componentPath = component.path;
+    const relativePath = path.relative(bestFolder, componentPath);
+
+    // Check if the component is nested (has more than one directory level)
+    const pathParts = relativePath.split(path.sep);
+    if (pathParts.length > 1) {
+      nestedPaths.push({
+        path: relativePath,
+      });
+    }
+  });
+
+  return nestedPaths;
+}

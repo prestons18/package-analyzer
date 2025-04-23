@@ -4,7 +4,7 @@ import { Detector } from "../interfaces/Detector";
 import { Finder } from "../interfaces/Finder";
 import { PackageMetadataDetails } from "../interfaces/MetadataExtractor";
 import { PackageMetadata } from "./types";
-import { getBestComponentFolder } from "../utils/GetBestComponentFolder";
+import { getBestComponentFolder } from "../utils";
 
 export class PackageAnalyzer {
   private readonly packageJsonCache: Map<string, any> = new Map();

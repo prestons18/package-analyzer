@@ -4,7 +4,7 @@ export { MonorepoDetector } from "./detectors/MonorepoDetector";
 export { FrameworkDetector } from "./detectors/FrameworkDetector";
 export { PackageAnalyzer } from "./core/PackageAnalyzer";
 export { ComponentScanner } from "./core/ComponentScanner";
-export { getBestComponentFolder } from "./utils/GetBestComponentFolder";
+export { getBestComponentFolder, getNestedComponentPaths } from "./utils";
 
 // Core types
 export type { FrameworkInfo, ToolInfo, PackageMetadata } from "./core/types";
