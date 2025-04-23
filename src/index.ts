@@ -1,11 +1,15 @@
 // Core exports
 export { ComponentFinder } from "./finders/ComponentFinder";
 export { MonorepoDetector } from "./detectors/MonorepoDetector";
+export { FrameworkDetector } from "./detectors/FrameworkDetector";
 export { PackageAnalyzer } from "./core/PackageAnalyzer";
+export { ComponentScanner } from "./core/ComponentScanner";
+export { getBestComponentFolder } from "./utils/GetBestComponentFolder";
 
 // Core types
+export type { FrameworkInfo, ToolInfo, PackageMetadata } from "./core/types";
 export type {
-  FrameworkInfo,
+  FrameworkInfo as FrameworkInfoExt,
   UtilityLibrary,
   PackageMetadataDetails,
 } from "./interfaces/MetadataExtractor";
